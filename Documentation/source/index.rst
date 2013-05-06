@@ -13,6 +13,7 @@ Contents:
    
    installation
    simpleexample
+   files
 
 
 
