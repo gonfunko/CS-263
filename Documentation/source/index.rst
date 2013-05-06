@@ -14,6 +14,7 @@ Contents:
    installation
    simpleexample
    files
+   pngcrush
 
 
 
