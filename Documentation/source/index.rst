@@ -15,6 +15,8 @@ Contents:
    simpleexample
    files
    pngcrush
+   pngcrush-emscripten
+   pngcrush-nacl
 
 
 
