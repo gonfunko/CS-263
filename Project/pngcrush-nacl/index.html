@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/common.js" charset="utf-8"></script>
+		<script src="js/example.js" charset="utf-8"></script>
+		<script src="js/blobber.js" charset="utf-8"></script>
+		<script src="js/bootstrap.js" charset="utf-8"></script>
+		<script src="js/b64.js" charset="utf-8"></script>
+		<script src="js/filesaver.js" charset="utf-8"></script>
+		<script src="js/files.js" charset="utf-8"></script>
+		<title>PNGCrush</title>
+	</head>
+	<body style="background-color: #dddddd;" onload="initialize()" data-custom-load="true" data-name="pngcrush-nacl" data-tools="newlib glibc pnacl" data-configs="Debug Release" data-path="{tc}/{config}">
+	     <div id="listener" style="height: 0px;"></div>
+	     <div id="log"></div>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="navbar-inner">
+				<a class="brand" href="#">PNGCrush</a>
+			</div>
+		</div>
+		<div class="hero-unit" style="background-image:url('img/header.jpg'); color: #eeeeee; margin: 20px; margin-left: 60px; margin-right: 60px; text-shadow: 0px 2px #333333;">
+			<h1>Compress your images</h1>
+			<p>PNGCrush allows you to cut the file size of .png images with no loss of quality.</p>
+			<p>
+				<a class="btn btn-primary btn-large" id="fileSelect">
+					Upload an image
+				</a>
+				<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+			</p>
+		</div>
+		<div id="dropbox" style="margin-left: 60px; border-width: 6px; border-color: #ffffff; border-style: dashed; width: 300px; height: 200px; border-radius: 35px; float: left;"><div id="innerDropbox" style="position: absolute; margin-left: -6px; margin-top: -7px; border-width: 6px; border-color: #bbbbbb; border-style: dashed; width: 300px; height: 200px; border-radius: 35px;"><h3 style="text-align: center; color: #888888; text-shadow: 0px 1px #ffffff; margin-top: 60px;" id="instructionalText">Drag a file here to compress it</h3><img id="preview" style="max-width: 100%; max-height: 100%; text-align: center;"/></div></div>
+		<div id="crunchStatus" style="color: #444444; text-align: center; text-shadow: 0px 1px #ffffff; margin-top: 60px; display: none;">
+			<h2 id="maintext">Crunching your image...</h2>
+			<h5 id="subtext">Hang tight &mdash; this might take a bit</h5>
+			<div class="progress progress-striped active" style="width: 400px; margin-left: auto; margin-right: auto;" id="progress">
+				<div class="bar" id="progressBar" style="width: 0"></div>
+			</div>
+		</div>
+		<ul id="filelist"></ul>
+</html>
